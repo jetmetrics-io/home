@@ -99,27 +99,6 @@
   margin: 0;
 }
 
-/* ---- О нас ---- */
-.jm-home-about {
-  max-width: 720px;
-  margin: 0 auto var(--jm-space-20);
-  padding: var(--jm-space-8);
-  background: var(--jm-bg);
-  border-radius: var(--jm-r-lg);
-}
-
-.jm-home-about p {
-  font-size: var(--jm-body);
-  color: var(--jm-text);
-  line-height: 1.6;
-  margin: 0;
-}
-
-.jm-home-about strong {
-  color: var(--jm-ink);
-  font-weight: var(--jm-w-semibold);
-}
-
 /* ---- Карточки-разделы ---- */
 .jm-home-grid {
   display: grid;
@@ -194,11 +173,95 @@
   }
 }
 
+/* ---- Кто мы (команда) ---- */
+.jm-home-team {
+  margin-top: var(--jm-space-20);
+  padding-top: var(--jm-space-16);
+  border-top: 1px solid var(--jm-line);
+}
+
+.jm-home-team-eyebrow {
+  font-family: var(--jm-font-mono);
+  font-size: 11px;
+  font-weight: var(--jm-w-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--jm-muted);
+  text-align: center;
+  margin: 0 0 var(--jm-space-8);
+}
+
+.jm-home-team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--jm-space-8);
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.jm-home-team-card {
+  display: flex;
+  gap: var(--jm-space-5);
+  align-items: flex-start;
+}
+
+.jm-home-team-photo {
+  position: relative;
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--role-tint);
+  display: grid;
+  place-items: center;
+}
+
+.jm-home-team-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jm-home-team-photo-fallback {
+  font-family: var(--jm-font-mono);
+  font-size: 28px;
+  font-weight: var(--jm-w-bold);
+  color: var(--role);
+}
+
+.jm-home-team-name {
+  font-size: var(--jm-h3);
+  font-weight: var(--jm-w-bold);
+  color: var(--jm-ink);
+  margin: 0 0 4px;
+}
+
+.jm-home-team-bio {
+  font-size: var(--jm-body-s);
+  color: var(--jm-text);
+  line-height: 1.55;
+  margin: 0 0 var(--jm-space-2);
+}
+
+.jm-home-team-fun {
+  font-size: var(--jm-body-s);
+  color: var(--jm-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
 @media (max-width: 640px) {
   .jm-home {
     padding: var(--jm-space-10) var(--jm-space-4) var(--jm-space-12);
   }
   .jm-home-title {
     font-size: 1.75rem;
+  }
+  .jm-home-team-grid {
+    grid-template-columns: 1fr;
+    gap: var(--jm-space-8);
   }
 }
