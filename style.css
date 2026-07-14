@@ -99,6 +99,47 @@
   margin: 0;
 }
 
+/* ---- CTA в hero ---- */
+.jm-home-cta {
+  margin-top: var(--jm-space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--jm-space-3);
+}
+
+/* Tilda перекрашивает любую ссылку внутри эмбеда в свой оранжевый
+   правилом, которое перебивает селектор по классу — отсюда !important */
+.jm-home-btn,
+.jm-home-btn:visited,
+.jm-home-btn:active {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--jm-space-2);
+  padding: 14px 28px;
+  border-radius: var(--jm-r-md);
+  font-family: var(--jm-font-sans);
+  font-weight: var(--jm-w-semibold);
+  font-size: var(--jm-body);
+  line-height: 1;
+  background: var(--jm-green) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: background var(--jm-dur) var(--jm-ease);
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.jm-home-btn:hover {
+  background: var(--jm-green-press) !important;
+}
+
+.jm-home-cta-note {
+  font-size: var(--jm-body-s);
+  color: var(--jm-muted);
+  margin: 0;
+}
+
 /* ---- Карточки-разделы ---- */
 .jm-home-grid {
   display: grid;
